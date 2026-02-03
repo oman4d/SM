@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Mart - الرئيسية</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+
+    <!-- ✅ RIGHT: logo + menu -->
+    <div class="nav-right-group">
+      <div class="brand">
+        <span class="brand-name">School Mart</span>
+        <span class="brand-badge">SM</span>
+      </div>
+
+      <nav class="menu">
+        <a class="active" href="index.html">الرئيسية</a>
+        <a href="store.html">المتجر</a>
+        <a href="dashboard.html">لوحة التحكم</a>
+        <a href="support.html">خدمة العملاء</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" type="button" data-dropdown-btn>
+            خدمة المجتمع <span class="caret">▾</span>
+          </button>
+          <div class="dropdown-menu" data-dropdown-menu>
+            <a href="#" onclick="return false;">مبادرات طلابية</a>
+            <a href="#" onclick="return false;">برامج تدريب</a>
+            <a href="#" onclick="return false;">فرص تطوعية</a>
+            <a href="#" onclick="return false;">قصص نجاح</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="nav-spacer"></div>
+
+    <!-- icons (near left) -->
+    <div class="nav-icons">
+      <button class="icon-btn" title="الحساب" type="button">👤</button>
+      <button class="icon-btn" title="السلة" type="button" data-open-cart>
+        🛒 <span class="cart-badge" data-cart-count>0</span>
+      </button>
+    </div>
+
+    <!-- ✅ LEFT: search -->
+    <div class="nav-search">
+      <div class="search">
+        <input type="search" placeholder="ابحث عن منتجات..." aria-label="بحث" />
+        <span class="search-icon">🔎</span>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-media">
+      <!-- ✅ Your Drive image as background -->
+      <div class="hero-img"
+           style="background-image:url('https://axnq6wwxanxw.compat.objectstorage.me-dcc-muscat-1.oraclecloud9.com/classera-bucket/54683/images/1770118221_smmain.png');"
+           aria-hidden="true">
+        <div class="hero-img-overlay"></div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="pill">✨ ابدأ رحلتك الريادية اليوم</div>
+      <h1>منصة رواد المستقبل</h1>
+      <p class="muted">
+        حول شغفك إلى مشروع حقيقي. منصة تعليمية تسويقية لعرض منتجات الطلبة المبدعين
+        وتطوير مهاراتهم في البيع والتسويق.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="store.html">تصفّح المنتجات</a>
+        <a class="btn btn-outline" href="support.html">تواصل معنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="container cards-row">
+    <div class="mini-card">
+      <div class="mini-icon">✨</div>
+      <h3>جودة مضمونة</h3>
+      <p class="muted">منتجات مختارة بعناية تخضع لمعايير الجودة.</p>
+    </div>
+    <div class="mini-card">
+      <div class="mini-icon">🤝</div>
+      <h3>دعم المجتمع</h3>
+      <p class="muted">نساهم في دعم المشاريع الطلابية وتمكين المواهب.</p>
+    </div>
+    <div class="mini-card">
+      <div class="mini-icon">🎓</div>
+      <h3>إبداع طلابي</h3>
+      <p class="muted">مساحة لعرض منتجات مبتكرة وتطوير مهارات البيع.</p>
+    </div>
+  </section>
+
+  <!-- Featured products -->
+  <section class="container section">
+    <div class="section-head">
+      <h2>منتجات مميزة</h2>
+      <a class="link" href="store.html">عرض الكل ←</a>
+    </div>
+
+    <div class="products-grid">
+      <article class="product-card">
+        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1400&q=60');">
+          <span class="tag">فنون</span>
+          <button class="hover-action" type="button" data-quick-view
+            data-id="a1" data-title="لوحة فنية تجريدية" data-price="4.5"
+            data-desc="طباعة فنية بدقة عالية تضيف لمسة جمالية لمكانك."
+            data-img="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1400&q=60"
+          >عرض التفاصيل</button>
+        </div>
+        <div class="product-body">
+          <div class="rating">4.8 ★</div>
+          <h3>لوحة فنية تجريدية</h3>
+          <p class="muted">طباعة فنية تضيف لمسة جمالية لمكانك.</p>
+          <div class="product-foot">
+            <button class="btn btn-small" type="button"
+              data-add-to-cart data-id="a1" data-name="لوحة فنية تجريدية" data-price="4.5">إضافة</button>
+            <div class="price">ر.ع 4.5</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&w=1400&q=60');">
+          <span class="tag">تكنولوجيا</span>
+          <button class="hover-action" type="button" data-quick-view
+            data-id="a2" data-title="روبوت تعليمي صغير" data-price="3.2"
+            data-desc="روبوت صغير لتعلّم البرمجة والمبادئ الأساسية."
+            data-img="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?auto=format&fit=crop&w=1400&q=60"
+          >عرض التفاصيل</button>
+        </div>
+        <div class="product-body">
+          <div class="rating">4.8 ★</div>
+          <h3>روبوت تعليمي صغير</h3>
+          <p class="muted">روبوت بسيط لتعلّم أساسيات البرمجة.</p>
+          <div class="product-foot">
+            <button class="btn btn-small" type="button"
+              data-add-to-cart data-id="a2" data-name="روبوت تعليمي صغير" data-price="3.2">إضافة</button>
+            <div class="price">ر.ع 3.2</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1400&q=60');">
+          <span class="tag">حِرف يدوية</span>
+          <button class="hover-action" type="button" data-quick-view
+            data-id="a3" data-title="كوب خزفي يدوي" data-price="2"
+            data-desc="كوب مصنوع يدويًا من السيراميك بجودة عالية."
+            data-img="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1400&q=60"
+          >عرض التفاصيل</button>
+        </div>
+        <div class="product-body">
+          <div class="rating">4.8 ★</div>
+          <h3>كوب خزفي يدوي</h3>
+          <p class="muted">كوب مصنوع يدويًا بجودة عالية.</p>
+          <div class="product-foot">
+            <button class="btn btn-small" type="button"
+              data-add-to-cart data-id="a3" data-name="كوب خزفي يدوي" data-price="2">إضافة</button>
+            <div class="price">ر.ع 2</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Loyalty banner -->
+  <section class="container loyalty">
+    <div class="loyalty-card">
+      <div class="loyalty-info">
+        <h2>انضم إلى برنامج الولاء</h2>
+        <p>اجمع النقاط على كل عملية شراء واربح خصومات حصرية وجوائز قيمة.</p>
+      </div>
+      <button class="btn btn-blue" type="button" onclick="alert('تم! (تجريبي)')">سجّل الآن مجانًا</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="muted">© School Mart 2026 — جميع الحقوق محفوظة.</span>
+  </div>
+</footer>
+
+<!-- Modal (Quick view) -->
+<div class="modal" data-modal>
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3 data-modal-title>تفاصيل المنتج</h3>
+      <button class="icon-btn" type="button" data-modal-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-img" data-modal-img></div>
+      <p class="muted" data-modal-desc></p>
+      <div class="modal-row">
+        <span class="muted">السعر:</span>
+        <strong data-modal-price></strong>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-dark" type="button" data-modal-add>إضافة للسلة</button>
+      <button class="btn btn-outline" type="button" data-modal-close2>إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Drawer -->
+<div class="overlay" data-overlay></div>
+<aside class="cart-drawer" data-cart>
+  <div class="cart-head">
+    <h3>سلة المشتريات</h3>
+    <button class="icon-btn" type="button" data-close-cart>✕</button>
+  </div>
+  <div class="cart-body" data-cart-body></div>
+  <div class="cart-foot">
+    <div class="total">
+      <span class="muted">الإجمالي</span>
+      <strong data-cart-total>ر.ع 0.0</strong>
+    </div>
+    <button class="btn btn-dark" type="button" onclick="alert('إتمام طلب (تجريبي)')">إتمام الطلب</button>
+    <button class="btn btn-outline" type="button" data-clear-cart>تفريغ السلة</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+</body>
+</html>

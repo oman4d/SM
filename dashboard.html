@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Mart - لوحة التحكم</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+
+    <div class="nav-left">
+      <button class="icon-btn" type="button" title="الحساب">👤</button>
+      <button class="icon-btn" type="button" title="السلة" data-open-cart>
+        🛒 <span class="cart-badge" data-cart-count>0</span>
+      </button>
+    </div>
+
+    <div class="nav-center">
+      <div class="search">
+        <input type="search" placeholder="ابحث..." />
+        <span class="search-icon">🔎</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="brand">
+        <span class="brand-name">School Mart</span>
+        <span class="brand-badge">SM</span>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">الرئيسية</a>
+        <a href="store.html">المتجر</a>
+        <a class="active" href="dashboard.html">لوحة التحكم</a>
+        <a href="support.html">خدمة العملاء</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" type="button" data-dropdown-btn>
+            خدمة المجتمع <span class="caret">▾</span>
+          </button>
+          <div class="dropdown-menu" data-dropdown-menu>
+            <a href="#" onclick="return false;">مبادرات طلابية</a>
+            <a href="#" onclick="return false;">برامج تدريب</a>
+            <a href="#" onclick="return false;">فرص تطوعية</a>
+            <a href="#" onclick="return false;">قصص نجاح</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+</header>
+
+<main class="container section">
+  <div class="page-head">
+    <h1>لوحة تحكم الطالب</h1>
+  </div>
+
+  <section class="dash-top">
+    <div class="stat-card">
+      <div class="stat-icon purple">📈</div>
+      <div class="stat-num">12%+</div>
+      <div class="muted small">نمو شهري</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon green">📦</div>
+      <div class="stat-num">45</div>
+      <div class="muted small">منتج تم بيعه</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon blue">💰</div>
+      <div class="stat-num">ر.ع 3,450</div>
+      <div class="muted small">إجمالي المبيعات</div>
+    </div>
+
+    <div class="rank-card">
+      <div class="rank-head">
+        <span class="rank-badge">🏆 حالة رائد الأعمال</span>
+      </div>
+      <h3>رائد أعمال ناشئ</h3>
+      <div class="rank-points">1250 نقطة</div>
+
+      <div class="progress">
+        <span style="width:70%"></span>
+      </div>
+      <div class="muted small">أكمل 5 مبيعات للوصول للمستوى التالي ✅</div>
+    </div>
+  </section>
+
+  <section class="dash-mid">
+    <div class="chart-card">
+      <div class="chart-title">تحليل المبيعات الشهرية</div>
+
+      <div class="bar-chart">
+        <div class="bar" style="--h:40%"><span>يناير</span></div>
+        <div class="bar" style="--h:30%"><span>فبراير</span></div>
+        <div class="bar" style="--h:60%"><span>مارس</span></div>
+        <div class="bar" style="--h:80%"><span>أبريل</span></div>
+        <div class="bar" style="--h:50%"><span>مايو</span></div>
+        <div class="bar" style="--h:90%"><span>يونيو</span></div>
+      </div>
+    </div>
+
+    <div class="account-card">
+      <h3>معلومات الحساب</h3>
+      <div class="info-row"><span class="muted">الاسم</span><strong>أحمد محمد</strong></div>
+      <div class="info-row"><span class="muted">نوع الحساب</span><strong>بائع (طالب)</strong></div>
+      <div class="info-row"><span class="muted">تاريخ الانضمام</span><strong>يناير 2025</strong></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="muted">© School Mart 2026 — جميع الحقوق محفوظة.</span>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="overlay" data-overlay></div>
+<aside class="cart-drawer" data-cart>
+  <div class="cart-head">
+    <h3>سلة المشتريات</h3>
+    <button class="icon-btn" type="button" data-close-cart>✕</button>
+  </div>
+  <div class="cart-body" data-cart-body></div>
+  <div class="cart-foot">
+    <div class="total">
+      <span class="muted">الإجمالي</span>
+      <strong data-cart-total>ر.ع 0.0</strong>
+    </div>
+    <button class="btn btn-dark" type="button" onclick="alert('إتمام طلب (تجريبي)')">إتمام الطلب</button>
+    <button class="btn btn-outline" type="button" data-clear-cart>تفريغ السلة</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+</body>
+</html>

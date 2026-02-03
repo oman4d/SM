@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Mart - خدمة العملاء</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+
+    <div class="nav-left">
+      <button class="icon-btn" type="button" title="الحساب">👤</button>
+      <button class="icon-btn" type="button" title="السلة" data-open-cart>
+        🛒 <span class="cart-badge" data-cart-count>0</span>
+      </button>
+    </div>
+
+    <div class="nav-center">
+      <div class="search">
+        <input type="search" placeholder="ابحث..." />
+        <span class="search-icon">🔎</span>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="brand">
+        <span class="brand-name">School Mart</span>
+        <span class="brand-badge">SM</span>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">الرئيسية</a>
+        <a href="store.html">المتجر</a>
+        <a href="dashboard.html">لوحة التحكم</a>
+        <a class="active" href="support.html">خدمة العملاء</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" type="button" data-dropdown-btn>
+            خدمة المجتمع <span class="caret">▾</span>
+          </button>
+          <div class="dropdown-menu" data-dropdown-menu>
+            <a href="#" onclick="return false;">مبادرات طلابية</a>
+            <a href="#" onclick="return false;">برامج تدريب</a>
+            <a href="#" onclick="return false;">فرص تطوعية</a>
+            <a href="#" onclick="return false;">قصص نجاح</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+</header>
+
+<main>
+  <section class="support-hero">
+    <div class="support-hero-bg"></div>
+    <div class="container support-hero-inner">
+      <h1>كيف يمكننا مساعدتك؟</h1>
+      <p class="muted">فريق الدعم لدينا جاهز للإجابة على جميع استفساراتك وحل أي مشكلة تواجهها.</p>
+    </div>
+  </section>
+
+  <section class="container section support-grid">
+    <div class="panel">
+      <div class="panel-title">
+        <h2>تواصل معنا</h2>
+        <span class="muted small">نرد عليك بأسرع وقت</span>
+      </div>
+
+      <form class="form" onsubmit="return window.fakeSend(event);">
+        <label>الاسم الكامل</label>
+        <input required type="text" placeholder="أدخل اسمك" />
+
+        <label>البريد الإلكتروني</label>
+        <input required type="email" placeholder="name@example.com" />
+
+        <label>نوع الرسالة</label>
+        <select required>
+          <option value="">اختر الموضوع</option>
+          <option>استفسار عن منتج</option>
+          <option>مشكلة في الطلب</option>
+          <option>اقتراح تطوير</option>
+          <option>أخرى</option>
+        </select>
+
+        <label>الرسالة</label>
+        <textarea required rows="5" placeholder="كيف يمكننا مساعدتك؟"></textarea>
+
+        <button class="btn btn-dark" type="submit">إرسال الرسالة ✈️</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">
+        <h2>الأسئلة الشائعة</h2>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>كيف يمكنني عرض منتجاتي للبيع؟</summary>
+          <p class="muted">قم بتسجيل حساب بائع (طالب)، ثم ارفع صور المنتج ووصفه وسعره. (حاليًا نموذج تجريبي).</p>
+        </details>
+
+        <details>
+          <summary>كيف يتم احتساب النقاط؟</summary>
+          <p class="muted">كل عملية شراء تمنح نقاطًا حسب قيمة الطلب. يمكن استبدال النقاط بخصومات لاحقًا.</p>
+        </details>
+
+        <details>
+          <summary>ما هي طرق الدفع المتاحة؟</summary>
+          <p class="muted">حاليًا عرض تجريبي. لاحقًا يمكن إضافة (بطاقة/تحويل/عند الاستلام).</p>
+        </details>
+
+        <details>
+          <summary>هل يمكنني إرجاع المنتج؟</summary>
+          <p class="muted">يعتمد على سياسة البائع. سنضيف سياسة موحدة في النسخة القادمة.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="muted">© School Mart 2026 — جميع الحقوق محفوظة.</span>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="overlay" data-overlay></div>
+<aside class="cart-drawer" data-cart>
+  <div class="cart-head">
+    <h3>سلة المشتريات</h3>
+    <button class="icon-btn" type="button" data-close-cart>✕</button>
+  </div>
+  <div class="cart-body" data-cart-body></div>
+  <div class="cart-foot">
+    <div class="total">
+      <span class="muted">الإجمالي</span>
+      <strong data-cart-total>ر.ع 0.0</strong>
+    </div>
+    <button class="btn btn-dark" type="button" onclick="alert('إتمام طلب (تجريبي)')">إتمام الطلب</button>
+    <button class="btn btn-outline" type="button" data-clear-cart>تفريغ السلة</button>
+  </div>
+</aside>
+
+<script src="js/main.js"></script>
+</body>
+</html>
